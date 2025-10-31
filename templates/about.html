@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="max-w-4xl mx-auto bg-white rounded-lg shadow-lg p-8">
+    <h1 class="text-3xl font-bold text-gray-800 mb-6">About Me</h1>
+    
+    <div class="mb-8">
+        <h2 class="text-2xl font-semibold text-gray-700 mb-4">Professional Summary</h2>
+        <p class="text-gray-600 leading-relaxed">
+            I am a passionate DevOps Engineer with 2+ years of experience in cloud technologies, automation, and infrastructure management. 
+            My expertise lies in containerization, CI/CD pipelines, and cloud infrastructure. I enjoy solving complex problems and 
+            implementing efficient solutions to improve system reliability and performance.
+        </p>
+    </div>
+
+    <div class="mb-8">
+        <h2 class="text-2xl font-semibold text-gray-700 mb-4">Education</h2>
+        <div class="mb-6">
+            <h3 class="text-xl font-medium text-gray-800">BCA - Computer Applications</h3>
+            <p class="text-gray-600">CSJM University Kanpur</p>
+        </div>
+        <div>
+            <h3 class="text-xl font-medium text-gray-800">Intermediate</h3>
+            <p class="text-gray-600">St. Xaviers, School CBSE board</p>
+        </div>
+    </div>
+
+    <div class="mb-8">
+        <h2 class="text-2xl font-semibold text-gray-700 mb-4">Languages</h2>
+        <ul class="list-disc pl-5 text-gray-600">
+            <li>English (Professional)</li>
+            <li>Hindi (Native)</li>
+        </ul>
+    </div>
+
+    <div class="mb-8">
+        <h2 class="text-2xl font-semibold text-gray-700 mb-4">Professional Experience</h2>
+        <div class="mb-6">
+            <h3 class="text-xl font-medium text-gray-800">Linux Administrator</h3>
+            <p class="text-gray-600">[Company Name] - [Duration]</p>
+            <ul class="list-disc pl-5 mt-2 text-gray-600">
+                <li>Managed and maintained Linux servers in production environments</li>
+                <li>Implemented automation scripts using Bash and Python</li>
+                <li>Worked with containerization technologies like Docker and Kubernetes</li>
+                <li>Collaborated with development teams to streamline CI/CD pipelines</li>
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}
