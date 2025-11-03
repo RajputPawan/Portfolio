@@ -35,11 +35,13 @@ jobs:
     - name: Install dependencies
       run: npm install
     
-    - name: Install ESLint globally
-      run: npm install -g eslint
-      
+    - name: Install ESLint and plugins
+      run: |
+        npm install -g eslint
+        npm install --save-dev @eslint/js globals
+        
     - name: Run linter
-      run: eslint .
+      run: npx eslint . --no-error-on-unmatched-pattern
     
     - name: Run tests
       run: npm test
