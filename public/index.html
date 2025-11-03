@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pawan Rajput - DevOps Engineer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #3b82f6;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .active {
+            color: #3b82f6;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full z-10">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center
+                    <span class="text-xl font-semibold text-gray-800">Pawan Rajput</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="nav-link text-gray-600 hover:text-blue-500 px-3 py-2">Home</a>
+                    <a href="#about" class="nav-link text-gray-600 hover:text-blue-500 px-3 py-2">About</a>
+                    <a href="#experience" class="nav-link text-gray-600 hover:text-blue-500 px-3 py-2">Experience</a>
+                    <a href="#skills" class="nav-link text-gray-600 hover:text-blue-500 px-3 py-2">Skills</a>
+                    <a href="#contact" class="nav-link text-gray-600 hover:text-blue-500 px-3 py-2">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-32 pb-20 px-4 bg-gradient-to-r from-blue-50 to-indigo-50">
+        <div class="max-w-6xl mx-auto text-center">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">Pawan Rajput</h1>
+            <h2 class="text-2xl md:text-3xl text-blue-600 mb-8">DevOps Engineer</h2>
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto mb-10">
+                Passionate about cloud technologies, automation, and building scalable infrastructure.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition duration-300 flex items-center">
+                    <i class="fas fa-envelope mr-2"></i> Contact Me
+                </a>
+                <a href="https://rajputpawan.github.io/Resume/" target="_blank" class="border-2 border-blue-600 text-blue-600 hover:bg-blue-50 px-6 py-3 rounded-lg font-medium transition duration-300 flex items-center">
+                    <i class="fas fa-external-link-alt mr-2"></i> View Resume
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 px-4 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">About Me</h2>
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-12">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Career Profile</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        I am a Jr. DevOps Engineer with 2+ years of experience and a keen interest in cloud technologies. 
+                        Proficient in Linux administration, automation, and inter-organizational engagement. 
+                        Expertise in Docker, Podman, Kubernetes, GitHub, Git, Jira, Confluence, Foreman, 
+                        Saltstack, and Bash scripting.
+                    </p>
+                    <div class="mt-8">
+                        <h4 class="text-lg font-semibold text-gray-800 mb-4">Education</h4>
+                        <div class="mb-6">
+                            <h5 class="text-blue-600 font-medium">BCA - Computer Science</h5>
+                            <p class="text-gray-600">CSJM University Kanpur</p>
+                        </div>
+                        <div>
+                            <h5 class="text-blue-600 font-medium">Intermediate</h5>
+                            <p class="text-gray-600">St. Xaviers, School CBSE board</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Languages</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-gray-700">English</span>
+                                <span class="text-gray-500">Professional</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="bg-blue-600 h-2.5 rounded-full" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-gray-700">Hindi</span>
+                                <span class="text-gray-500">Native</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="bg-blue-600 h-2.5 rounded-full" style="width: 100%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 px-4 bg-gray-50">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Work Experience</h2>
+            
+            <div class="bg-white rounded-lg shadow-md p-6 mb-8">
+                <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-4">
+                    <h3 class="text-xl font-semibold text-gray-800">Linux Administrator</h3>
+                    <span class="text-blue-600">Current</span>
+                </div>
+                
+                <div class="space-y-4">
+                    <div class="border-l-4 border-blue-500 pl-4">
+                        <h4 class="font-medium text-gray-800">System Monitoring and Maintenance</h4>
+                        <p class="text-gray-600">
+                            Regularly monitor system performance and ensure the stability and reliability of applications. 
+                            Perform routine maintenance tasks such as updates, patches, and backups.
+                        </p>
+                    </div>
+                    
+                    <div class="border-l-4 border-blue-500 pl-4">
+                        <h4 class="font-medium text-gray-800">Application Deployment and Configuration</h4>
+                        <p class="text-gray-600">
+                            Deploy new applications and updates, ensuring they are configured correctly and 
+                            optimized for performance. Manage and configure servers to support application requirements.
+                        </p>
+                    </div>
+                    
+                    <div class="border-l-4 border-blue-500 pl-4">
+                        <h4 class="font-medium text-gray-800">Troubleshooting and Issue Resolution</h4>
+                        <p class="text-gray-600">
+                            Identify and resolve system and application issues promptly to minimize downtime. 
+                            Collaborate with development and support teams to address and fix bugs.
+                        </p>
+                    </div>
+                    
+                    <div class="border-l-4 border-blue-500 pl-4">
+                        <h4 class="font-medium text-gray-800">Security Management</h4>
+                        <p class="text-gray-600">
+                            Implement and maintain security measures to protect systems and data. 
+                            Regularly update security protocols and monitor for potential threats.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <h3 class="text-xl font-semibold text-gray-800 mb-4">Key Achievements</h3>
+                <ul class="list-disc pl-6 space-y-2 text-gray-600">
+                    <li>Successfully automated routine maintenance tasks, reducing manual work by 60%</li>
+                    <li>Implemented security measures that reduced system vulnerabilities by 75%</li>
+                    <li>Improved system performance through optimization and monitoring</li>
+                    <li>Collaborated with cross-functional teams to ensure smooth application deployments</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 px-4 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Skills & Expertise</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Technical Skills -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-code text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Technical Skills</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>Linux System Administration</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>Docker & Containerization</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>Kubernetes Orchestration</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>CI/CD Pipelines</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>Infrastructure as Code (IaC)</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Tools & Technologies -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-tools text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Tools & Technologies</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-center">
+                            <i class="fab fa-docker text-blue-500 mr-2"></i>
+                            <span>Docker & Podman</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-cubes text-blue-500 mr-2"></i>
+                            <span>Kubernetes</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fab fa-github text-gray-800 mr-2"></i>
+                            <span>Git & GitHub</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-server text-blue-500 mr-2"></i>
+                            <span>Foreman</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-code-branch text-blue-500 mr-2"></i>
+                            <span>Saltstack</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Soft Skills -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-users text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Soft Skills</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-center">
+                            <i class="fas fa-comments text-blue-500 mr-2"></i>
+                            <span>Team Collaboration</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-lightbulb text-blue-500 mr-2"></i>
+                            <span>Problem Solving</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-tasks text-blue-500 mr-2"></i>
+                            <span>Time Management</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-comment-dots text-blue-500 mr-2"></i>
+                            <span>Effective Communication</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-sync-alt text-blue-500 mr-2"></i>
+                            <span>Adaptability</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-4 bg-gray-50">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Get In Touch</h2>
+            
+            <div class="bg-white rounded-lg shadow-md p-8 max-w-3xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-4">Contact Information</h3>
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <i class="fas fa-envelope text-blue-500 mt-1 mr-3"></i>
+                                <div>
+                                    <h4 class="font-medium text-gray-800">Email</h4>
+                                    <a href="mailto:rajput.pawan.personal@gmail.com" class="text-blue-600 hover:underline">
+                                        rajput.pawan.personal@gmail.com
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-phone-alt text-blue-500 mt-1 mr-3"></i>
+                                <div>
+                                    <h4 class="font-medium text-gray-800">Phone</h4>
+                                    <a href="tel:6392022174" class="text-blue-600 hover:underline">
+                                        +91 6392022174
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fab fa-linkedin text-blue-500 mt-1 mr-3"></i>
+                                <div>
+                                    <h4 class="font-medium text-gray-800">LinkedIn</h4>
+                                    <a href="https://www.linkedin.com/in/pawan-rajput-b3918a251/" target="_blank" class="text-blue-600 hover:underline">
+                                        linkedin.com/in/pawan-rajput-b3918a251
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fab fa-github text-blue-500 mt-1 mr-3"></i>
+                                <div>
+                                    <h4 class="font-medium text-gray-800">GitHub</h4>
+                                    <a href="https://github.com/RajputPawan" target="_blank" class="text-blue-600 hover:underline">
+                                        github.com/RajputPawan
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-4">Send Me a Message</h3>
+                        <form class="space-y-4">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
+                                <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                                <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            </div>
+                            <div>
+                                <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                                <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                            </div>
+                            <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-md font-medium transition duration-300">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8 px-4">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <p>&copy; <span id="current-year"></span> Pawan Rajput. All rights reserved.</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="https://github.com/RajputPawan" target="_blank" class="text-gray-300 hover:text-white transition duration-300">
+                        <i class="fab fa-github text-2xl"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/pawan-rajput-b3918a251/" target="_blank" class="text-gray-300 hover:text-white transition duration-300">
+                        <i class="fab fa-linkedin-in text-2xl"></i>
+                    </a>
+                    <a href="mailto:rajput.pawan.personal@gmail.com" class="text-gray-300 hover:text-white transition duration-300">
+                        <i class="fas fa-envelope text-2xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Highlight active navigation link on scroll
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('nav a');
+            
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= (sectionTop - sectionHeight / 3)) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

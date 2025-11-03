@@ -1,0 +1,17 @@
+<nav class="bg-white shadow-lg">
+    <div class="max-w-6xl mx-auto px-4">
+        <div class="flex justify-between">
+            <div class="flex space-x-7">
+                <a href="/" class="flex items-center py-4 px-2">
+                    <span class="font-semibold text-gray-500 text-lg">Pawan Rajput</span>
+                </a>
+            </div>
+            <div class="hidden md:flex items-center space-x-1">
+                <a href="/" class="py-4 px-2 {{#eq active 'home'}}text-blue-500 border-b-4 border-blue-500{{/eq}} font-semibold">Home</a>
+                <a href="/about" class="py-4 px-2 {{#eq active 'about'}}text-blue-500 border-b-4 border-blue-500{{/eq}} font-semibold">About</a>
+                <a href="/projects" class="py-4 px-2 {{#eq active 'projects'}}text-blue-500 border-b-4 border-blue-500{{/eq}} font-semibold">Projects</a>
+                <a href="/contact" class="py-4 px-2 {{#eq active 'contact'}}text-blue-500 border-b-4 border-blue-500{{/eq}} font-semibold">Contact</a>
+            </div>
+        </div>
+    </div>
+</nav>
