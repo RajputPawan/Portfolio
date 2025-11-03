@@ -1,6 +1,7 @@
 {
   "name": "portfolio",
   "version": "1.0.0",
+  "type": "module",
   "description": "Modern portfolio website built with Node.js and Express",
   "main": "server.js",
   "scripts": {
