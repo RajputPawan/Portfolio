@@ -1,17 +1,22 @@
-/**
- * Basic test file for the portfolio server
- * This ensures Jest can run successfully in CI/CD
- */
+const request = require('supertest');
+const { app } = require('../server');
 
-describe('Portfolio Server', () => {
-  test('should have a test suite', () => {
-    expect(true).toBe(true);
+describe('Portfolio server', () => {
+  it('serves the home page', async () => {
+    const res = await request(app).get('/');
+    expect(res.statusCode).toBe(200);
+    expect(res.text).toContain('Hi, I am');
   });
 
-  test('should verify basic setup', () => {
-    const packageJson = require('../package.json');
-    expect(packageJson.name).toBe('portfolio');
-    expect(packageJson.version).toBeDefined();
+  it('serves the projects page', async () => {
+    const res = await request(app).get('/projects');
+    expect(res.statusCode).toBe(200);
+    expect(res.text).toContain('Highlighted Projects');
+  });
+
+  it('returns a 404 for unknown routes', async () => {
+    const res = await request(app).get('/unknown-page');
+    expect(res.statusCode).toBe(404);
+    expect(res.text).toContain('Return home');
   });
 });
-

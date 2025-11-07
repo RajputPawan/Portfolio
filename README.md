@@ -1,127 +1,60 @@
-# Pawan Rajput - DevOps Portfolio
+# Portfolio
 
-![GitHub Actions](https://github.com/RajputPawan/Portfolio/actions/workflows/python-app.yml/badge.svg)
-[![codecov](https://codecov.io/gh/RajputPawan/Portfolio/branch/main/graph/badge.svg?token=YOUR_CODECOV_TOKEN)](https://codecov.io/gh/RajputPawan/Portfolio)
-
-Welcome to my professional portfolio website! This project showcases my skills, projects, and experience as a DevOps Engineer.
+Modern developer portfolio powered by Express and Handlebars. The app can run dynamically for local previews and exports a static version for GitHub Pages via CI/CD.
 
 ## Features
 
-- **Responsive Design**: Works on all devices (desktop, tablet, mobile)
-- **Modern UI**: Built with Tailwind CSS for a clean, professional look
-- **CI/CD Pipeline**: Automated testing and deployment with GitHub Actions
-- **Project Showcase**: Highlighting key projects and technologies
-- **Contact Form**: Easy way to get in touch
+- ⚡ **Express + Handlebars** server with reusable layouts and partials
+- 🧪 **Jest + Supertest** coverage for critical routes
+- 🏗️ **Static export** using Node script for fast GitHub Pages hosting
+- 🚀 **GitHub Actions** workflow that tests, builds, and publishes to `gh-pages`
 
-## 🚀 Getting Started
-
-### Prerequisites
-
-- Python 3.9 or higher
-- pip (Python package manager)
-- Git
-
-### Local Development
-
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/RajputPawan/Portfolio.git
-   cd Portfolio
-   ```
-
-2. **Create a virtual environment**
-   ```bash
-   # On Windows
-   python -m venv venv
-   .\venv\Scripts\activate
-   
-   # On macOS/Linux
-   python3 -m venv venv
-   source venv/bin/activate
-   ```
-
-3. **Install dependencies**
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-4. **Run the development server**
-   ```bash
-   python app.py
-   ```
-
-5. **Open your browser**
-   Visit `http://127.0.0.1:5000` to view your portfolio locally.
-
-## 🛠️ Technologies Used
-
-- **Backend**: Python, Flask
-- **Frontend**: HTML5, Tailwind CSS, JavaScript
-- **DevOps**: GitHub Actions, Docker
-- **Testing**: pytest, Codecov
-
-## 📦 CI/CD Pipeline
-
-This project uses GitHub Actions for continuous integration and deployment. The workflow includes:
-
-1. **Build**: Set up Python and install dependencies
-2. **Lint**: Check code quality with flake8
-3. **Test**: Run unit tests with pytest and generate coverage reports
-4. **Deploy**: (Optional) Deploy to Vercel or your preferred hosting service
-
-### Setting Up GitHub Actions
-
-1. **Fork this repository** to your GitHub account
-2. **Enable GitHub Actions** in your repository settings
-3. **Add secrets** (if needed for deployment):
-   - `VERCEL_TOKEN`: For Vercel deployment
-   - `CODECOV_TOKEN`: For code coverage reporting
-
-## 🧪 Running Tests
+## Getting started
 
 ```bash
-# Install test dependencies
-pip install -r requirements.txt
-
-# Run tests
-pytest
-
-# Run tests with coverage report
-pytest --cov=.
+npm install
+npm run dev        # starts on http://localhost:3000 with nodemon
+npm test           # run Jest test suite
+npm run build      # renders static site into dist/
 ```
 
-## 🚀 Deployment
+## Project structure
 
-### Vercel (Recommended)
+```
+├─ public/              # static assets (css, images, etc.)
+├─ scripts/build-static # Node script to export templates to dist/
+├─ views/               # Handlebars templates, layouts, partials
+├─ __tests__/           # Jest tests using supertest
+├─ server.js            # Express application
+└─ .github/workflows/   # CI/CD pipeline definition
+```
 
-1. Install Vercel CLI:
-   ```bash
-   npm install -g vercel
-   ```
+## GitHub Actions pipeline
 
-2. Deploy:
-   ```bash
-   vercel
-   ```
+Located at `.github/workflows/ci.yml` the workflow performs:
 
-### Other Platforms
+1. `npm ci` (falls back to `npm install` if lock file is absent) and ensures dev dependencies
+2. Grants execute permissions for binaries inside `node_modules/.bin`
+3. Runs the Jest suite
+4. Builds the static site (`npm run build`)
+5. Deploys `dist/` to `gh-pages` using `JamesIves/github-pages-deploy-action`
 
-This application can be deployed to any platform that supports Python applications, such as:
-- Heroku
-- PythonAnywhere
-- AWS Elastic Beanstalk
-- Google App Engine
+The deploy job only runs on `main` once tests succeed.
 
-## 📄 License
+## Environment variables
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+The app supports optional variables defined in a `.env` file:
 
-## 🤝 Contributing
+- `PORT` – override default `3000`
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+## Deploying manually
 
-## 📧 Contact
+```bash
+npm install
+npm run build
+npx gh-pages -d dist
+```
 
-- GitHub: [@RajputPawan](https://github.com/RajputPawan)
-- LinkedIn: [Pawan Rajput](https://www.linkedin.com/in/pawan-rajput-b3918a251)
-- Email: pawan.rajput@example.com
+## License
+
+MIT © ZTDGCX

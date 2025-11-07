@@ -1,0 +1,19 @@
+<section>
+  <h1>Highlighted Projects</h1>
+  <p class="lead">Real-world engagements that delivered resilient and observable platforms.</p>
+</section>
+
+<section class="grid projects">
+  {{#each projects}}
+    <article>
+      <h3>{{this.name}}</h3>
+      <p>{{this.summary}}</p>
+      <h4>Tech Stack</h4>
+      <ul>
+        {{#each this.tech}}
+          <li>{{this}}</li>
+        {{/each}}
+      </ul>
+    </article>
+  {{/each}}
+</section>

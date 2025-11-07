@@ -1,29 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{title}} - My Portfolio</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-gray-100">
-    {{> header active=active title=title }}
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{siteMeta.name}} • {{siteMeta.title}}</title>
+    <meta name="description" content="{{siteMeta.description}}" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css" />
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <header class="container" id="top">
+      {{> header }}
+    </header>
 
-    <main class="container mx-auto px-4 py-8">
-        {{{body}}}
+    <main class="container">
+      {{{body}}}
     </main>
 
-    {{> footer currentYear=currentYear }}
-
-    <script>
-        // Add current year to footer
-        document.addEventListener('DOMContentLoaded', function() {
-            const year = new Date().getFullYear();
-            const footer = document.querySelector('footer p');
-            if (footer) {
-                footer.innerHTML = `© ${year} My Portfolio. All rights reserved.`;
-            }
-        });
-    </script>
-</body>
+    <footer class="container">
+      {{> footer }}
+    </footer>
+  </body>
 </html>

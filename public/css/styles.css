@@ -1,0 +1,77 @@
+body {
+  background: #0e1726;
+  color: #f5f5f5;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 0;
+}
+
+.navigation ul {
+  display: flex;
+  list-style: none;
+  gap: 1.25rem;
+  margin: 0;
+}
+
+.navigation a {
+  color: #e5e7eb;
+  text-decoration: none;
+}
+
+.navigation a.active,
+.navigation a:hover {
+  color: #8b5cf6;
+}
+
+.hero {
+  text-align: center;
+  padding: 4rem 0 2rem;
+}
+
+.hero .cta {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.skills article,
+.projects article {
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 12px;
+  padding: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.timeline article {
+  border-left: 4px solid #8b5cf6;
+  padding-left: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.timeline span {
+  color: #a5b4fc;
+}
+
+.contact ul {
+  list-style: none;
+  padding: 0;
+}
+
+.contact li {
+  margin-bottom: 0.5rem;
+}
+
+.error {
+  text-align: center;
+  padding: 5rem 0;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem 0;
+  opacity: 0.7;
+}

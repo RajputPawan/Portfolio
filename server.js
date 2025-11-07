@@ -1,105 +1,154 @@
-// Load environment variables if .env file exists
-try {
-  require('dotenv').config();
-} catch (e) {
-  // dotenv is optional, continue without it
-}
-
+const path = require('path');
 const express = require('express');
 const exphbs = require('express-handlebars');
-const path = require('path');
-const fs = require('fs');
+const dotenv = require('dotenv');
+
+dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Debug: Log views directory
-console.log('Views directory:', path.join(__dirname, 'views'));
-console.log('Templates directory:', path.join(__dirname, 'templates'));
+// View engine configuration
+const viewsPath = path.join(__dirname, 'views');
+const partialsPath = path.join(viewsPath, 'partials');
+const layoutsPath = path.join(viewsPath, 'layouts');
 
-// Set up Handlebars view engine with custom helpers
 const hbs = exphbs.create({
   extname: '.hbs',
   defaultLayout: 'main',
-  layoutsDir: path.join(__dirname, 'views/layouts'),
-  partialsDir: [
-    path.join(__dirname, 'views/partials')
-  ],
+  layoutsDir: layoutsPath,
+  partialsDir: partialsPath,
   helpers: {
-    eq: function (a, b) {
-      return a === b;
-    }
+    year: () => new Date().getFullYear(),
+    eq: (left, right) => left === right
   }
 });
 
-// Debug: Check if views exist
-const viewsDir = path.join(__dirname, 'views');
-console.log('Views directory exists:', fs.existsSync(viewsDir));
-if (fs.existsSync(viewsDir)) {
-  console.log('Files in views directory:', fs.readdirSync(viewsDir));
-}
-
 app.engine('hbs', hbs.engine);
 app.set('view engine', 'hbs');
-app.set('views', [
-  path.join(__dirname, 'views'),
-  path.join(__dirname, 'templates')
-]);
+app.set('views', viewsPath);
 
-// Middleware
-app.use(express.static('public'));
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+// Static assets
+app.use(express.static(path.join(__dirname, 'public')));
+
+// Shared page data
+const siteMeta = {
+  name: 'ZTDGCX',
+  title: 'DevOps & Cloud Engineer',
+  description: 'Building reliable infrastructure, automation pipelines, and delightful user experiences.'
+};
+
+const projectList = [
+  {
+    name: 'Cloud Native Observability',
+    tech: ['Grafana', 'Prometheus', 'Helm'],
+    summary: 'Designed a unified observability stack for Kubernetes clusters with multi-region failover.'
+  },
+  {
+    name: 'GitOps Deployment Platform',
+    tech: ['ArgoCD', 'Terraform', 'AWS'],
+    summary: 'Implemented a GitOps workflow that reduced deployment lead time by 70%. '
+  },
+  {
+    name: 'Self-Healing CI/CD',
+    tech: ['GitHub Actions', 'Docker', 'Python'],
+    summary: 'Created reusable CI/CD pipelines with automated rollbacks and infrastructure checks.'
+  }
+];
+
+const contactLinks = {
+  email: 'mailto:hello@example.com',
+  github: 'https://github.com/ZTDGCX',
+  linkedin: 'https://www.linkedin.com/in/sample-profile'
+};
 
 // Routes
 app.get('/', (req, res) => {
-  console.log('Rendering home page');
   res.render('home', {
-    title: 'Home',
-    active: 'home',
-    currentYear: new Date().getFullYear()
+    page: 'home',
+    siteMeta,
+    hero: {
+      heading: 'Hi, I am ' + siteMeta.name,
+      subheading: siteMeta.title,
+      ctaPrimary: {
+        label: 'View Projects',
+        href: '/projects'
+      },
+      ctaSecondary: {
+        label: 'Get in touch',
+        href: '/contact'
+      }
+    },
+    skills: [
+      {
+        title: 'Automation & IaC',
+        description: 'Terraform, Ansible, Pulumi, and reusable module design.'
+      },
+      {
+        title: 'CI/CD at Scale',
+        description: 'GitHub Actions, GitLab CI, Jenkins, and container registries.'
+      },
+      {
+        title: 'Cloud Platforms',
+        description: 'AWS, Azure, and GCP with cost visibility and governance.'
+      }
+    ]
   });
 });
 
 app.get('/about', (req, res) => {
-  console.log('Rendering about page');
   res.render('about', {
-    title: 'About',
-    active: 'about',
-    currentYear: new Date().getFullYear()
+    page: 'about',
+    siteMeta,
+    timeline: [
+      {
+        title: 'Senior DevOps Engineer',
+        org: 'Innovatech Labs',
+        period: '2023 — Present',
+        details: 'Leading platform reliability and defining SRE practices for a 40+ microservice architecture.'
+      },
+      {
+        title: 'Cloud Engineer',
+        org: 'Nimbus Solutions',
+        period: '2020 — 2023',
+        details: 'Migrated legacy workloads to AWS, introduced Infrastructure as Code, and built release automation.'
+      }
+    ]
   });
 });
 
-// 404 handler
-app.use((req, res, next) => {
-  console.log(`404: ${req.originalUrl}`);
+app.get('/projects', (req, res) => {
+  res.render('projects', {
+    page: 'projects',
+    siteMeta,
+    projects: projectList
+  });
+});
+
+app.get('/contact', (req, res) => {
+  res.render('contact', {
+    page: 'contact',
+    siteMeta,
+    contact: contactLinks
+  });
+});
+
+app.use((req, res) => {
   res.status(404).render('404', {
-    title: 'Not Found',
-    active: '',
-    currentYear: new Date().getFullYear()
+    page: '404',
+    siteMeta
   });
 });
 
-// Error handler
-app.use((err, req, res, next) => {
-  console.error('Error:', err);
-  res.status(500).send('Something broke!');
-});
+function startServer(port = PORT) {
+  return app.listen(port, () => {
+    // eslint-disable-next-line no-console
+    console.log(`Portfolio site running on http://localhost:${port}`);
+  });
+}
 
-// Start server
-app.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT}`);
-  console.log('Available routes:');
-  console.log(`- http://localhost:${PORT}/`);
-  console.log(`- http://localhost:${PORT}/about`);
-}).on('error', (err) => {
-  if (err.code === 'EADDRINUSE') {
-    console.error(`\n❌ Error: Port ${PORT} is already in use!`);
-    console.error(`   Try using a different port: PORT=3001 node server.js\n`);
-  } else {
-    console.error('\n❌ Server error:', err.message);
-  }
-  process.exit(1);
-});
+if (require.main === module) {
+  startServer();
+}
 
-module.exports = app;
+module.exports = { app, startServer };
