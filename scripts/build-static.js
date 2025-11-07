@@ -24,9 +24,9 @@ const hbs = create({
 });
 
 const siteMeta = {
-  name: 'ZTDGCX',
-  title: 'DevOps & Cloud Engineer',
-  description: 'Building reliable infrastructure, automation pipelines, and delightful user experiences.'
+  name: 'Pawan Rajput',
+  title: 'DevOps Engineer',
+  description: 'Passionate about cloud technologies, automation, and building scalable infrastructure.'
 };
 
 const pages = [
@@ -56,16 +56,16 @@ const pages = [
       siteMeta,
       timeline: [
         {
-          title: 'Senior DevOps Engineer',
-          org: 'Innovatech Labs',
-          period: '2023 — Present',
-          details: 'Leading platform reliability and defining SRE practices for a 40+ microservice architecture.'
+          title: 'DevOps Engineer',
+          org: 'Full-time',
+          period: '2+ years',
+          details: 'Experienced in Docker, Kubernetes, CI/CD (GitHub Actions), Linux administration, and automation.'
         },
         {
-          title: 'Cloud Engineer',
-          org: 'Nimbus Solutions',
-          period: '2020 — 2023',
-          details: 'Migrated legacy workloads to AWS, introduced Infrastructure as Code, and built release automation.'
+          title: 'Linux Administrator',
+          org: 'Production Environments',
+          period: 'Prior Experience',
+          details: 'Managed and maintained Linux servers, implemented automation with Bash/Python, and improved system reliability.'
         }
       ]
     },
@@ -102,9 +102,9 @@ const pages = [
       page: 'contact',
       siteMeta,
       contact: {
-        email: 'mailto:hello@example.com',
-        github: 'https://github.com/ZTDGCX',
-        linkedin: 'https://www.linkedin.com/in/sample-profile'
+        email: 'mailto:rajput.pawan.personal@gmail.com',
+        github: 'https://github.com/RajputPawan',
+        linkedin: 'https://www.linkedin.com/in/pawan-rajput-b3918a251'
       }
     },
     output: 'contact/index.html'
