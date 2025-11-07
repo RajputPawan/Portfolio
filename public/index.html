@@ -51,7 +51,21 @@
     <section id="home" class="pt-32 pb-20 px-4 bg-gradient-to-r from-blue-50 to-indigo-50">
         <div class="max-w-6xl mx-auto text-center">
             <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">Pawan Rajput</h1>
-            <h2 class="text-2xl md:text-3xl text-blue-600 mb-8">DevOps Engineer</h2>
+            <h2 class="text-2xl md:text-3xl text-blue-600 mb-4">DevOps Engineer</h2>
+            <div class="flex justify-center space-x-4 mb-8">
+                <a href="mailto:rajput.pawan.personal@gmail.com" class="text-gray-600 hover:text-blue-500">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="tel:6392022174" class="text-gray-600 hover:text-blue-500">
+                    <i class="fas fa-phone"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/pawan-rajput-b3918a251/" target="_blank" class="text-gray-600 hover:text-blue-500">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/RajputPawan" target="_blank" class="text-gray-600 hover:text-blue-500">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
             <p class="text-lg text-gray-600 max-w-3xl mx-auto mb-10">
                 Passionate about cloud technologies, automation, and building scalable infrastructure.
             </p>
@@ -70,33 +84,31 @@
     <section id="about" class="py-20 px-4 bg-white">
         <div class="max-w-6xl mx-auto">
             <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">About Me</h2>
-            <div class="flex flex-col md:flex-row items-center">
-                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-12">
-                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Career Profile</h3>
-                    <p class="text-gray-600 mb-6 leading-relaxed">
-                        I am a Jr. DevOps Engineer with 2+ years of experience and a keen interest in cloud technologies. 
-                        Proficient in Linux administration, automation, and inter-organizational engagement. 
-                        Expertise in Docker, Podman, Kubernetes, GitHub, Git, Jira, Confluence, Foreman, 
-                        Saltstack, and Bash scripting.
-                    </p>
-                    <div class="mt-8">
-                        <h4 class="text-lg font-semibold text-gray-800 mb-4">Education</h4>
-                        <div class="mb-6">
-                            <h5 class="text-blue-600 font-medium">BCA - Computer Science</h5>
+            <div class="flex flex-col md:flex-row items-start gap-8">
+                <div class="md:w-1/2">
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                        <h3 class="text-xl font-semibold mb-4 text-gray-800 border-b pb-2">Education</h3>
+                        <div class="mb-6 pl-4 border-l-4 border-blue-500">
+                            <h4 class="font-medium text-gray-800">BCA - Computer Science</h4>
                             <p class="text-gray-600">CSJM University Kanpur</p>
                         </div>
-                        <div>
-                            <h5 class="text-blue-600 font-medium">Intermediate</h5>
-                            <p class="text-gray-600">St. Xaviers, School CBSE board</p>
+                        <div class="pl-4 border-l-4 border-blue-500">
+                            <h4 class="font-medium text-gray-800">Intermediate</h4>
+                            <p class="text-gray-600">St. Xavier's, CBSE Board</p>
                         </div>
                     </div>
-                </div>
-                <div class="md:w-1/2">
-                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Languages</h3>
-                    <div class="space-y-4">
-                        <div>
-                            <div class="flex justify-between mb-1">
-                                <span class="text-gray-700">English</span>
+                    
+                    <div class="mt-8 bg-gray-50 p-6 rounded-lg shadow-sm">
+                        <h3 class="text-xl font-semibold mb-4 text-gray-800 border-b pb-2">Languages</h3>
+                        <div class="space-y-2">
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-gray-700">English</span>
+                                    <span class="text-sm text-gray-500">Professional</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2">
+                                    <div class="bg-blue-600 h-2 rounded-full" style="width: 90%"></div>
+                                </div>
                                 <span class="text-gray-500">Professional</span>
                             </div>
                             <div class="w-full bg-gray-200 rounded-full h-2.5">
@@ -123,23 +135,17 @@
         <div class="max-w-6xl mx-auto">
             <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Work Experience</h2>
             
-            <div class="bg-white rounded-lg shadow-md p-6 mb-8">
-                <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-4">
-                    <h3 class="text-xl font-semibold text-gray-800">Linux Administrator</h3>
-                    <span class="text-blue-600">Current</span>
-                </div>
-                
-                <div class="space-y-4">
-                    <div class="border-l-4 border-blue-500 pl-4">
-                        <h4 class="font-medium text-gray-800">System Monitoring and Maintenance</h4>
-                        <p class="text-gray-600">
-                            Regularly monitor system performance and ensure the stability and reliability of applications. 
-                            Perform routine maintenance tasks such as updates, patches, and backups.
-                        </p>
+            <div class="space-y-8">
+                <!-- Linux Admin Experience -->
+                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300">
+                    <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-4">
+                        <h3 class="text-xl font-semibold text-gray-800">Linux Administrator</h3>
+                        <span class="bg-blue-100 text-blue-800 text-sm font-medium px-2.5 py-0.5 rounded">Current</span>
                     </div>
                     
-                    <div class="border-l-4 border-blue-500 pl-4">
-                        <h4 class="font-medium text-gray-800">Application Deployment and Configuration</h4>
+                    <div class="mb-6">
+                        <h4 class="text-gray-700 font-medium">DevOps Engineer</h4>
+                        <p class="text-gray-500">Full-time • 2+ years experience</p>
                         <p class="text-gray-600">
                             Deploy new applications and updates, ensuring they are configured correctly and 
                             optimized for performance. Manage and configure servers to support application requirements.
@@ -182,92 +188,160 @@
             <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Skills & Expertise</h2>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Technical Skills -->
-                <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
-                    <div class="text-blue-600 mb-4">
-                        <i class="fas fa-code text-3xl"></i>
+                <!-- Containerization & Orchestration -->
+                <div class="bg-white border border-gray-100 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="flex items-center mb-4">
+                        <div class="p-2 bg-blue-50 rounded-lg mr-3">
+                            <i class="fab fa-docker text-blue-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800">Containerization & Orchestration</h3>
                     </div>
-                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Technical Skills</h3>
                     <ul class="space-y-3">
                         <li class="flex items-center">
-                            <i class="fas fa-check text-green-500 mr-2"></i>
-                            <span>Linux System Administration</span>
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span class="text-gray-700">Docker & Docker Compose</span>
                         </li>
                         <li class="flex items-center">
-                            <i class="fas fa-check text-green-500 mr-2"></i>
-                            <span>Docker & Containerization</span>
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span class="text-gray-700">Kubernetes</span>
                         </li>
                         <li class="flex items-center">
-                            <i class="fas fa-check text-green-500 mr-2"></i>
-                            <span>Kubernetes Orchestration</span>
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span class="text-gray-700">Podman</span>
                         </li>
                         <li class="flex items-center">
-                            <i class="fas fa-check text-green-500 mr-2"></i>
-                            <span>CI/CD Pipelines</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-green-500 mr-2"></i>
-                            <span>Infrastructure as Code (IaC)</span>
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span class="text-gray-700">Container Networking</span>
                         </li>
                     </ul>
                 </div>
                 
-                <!-- Tools & Technologies -->
-                <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
-                    <div class="text-blue-600 mb-4">
-                        <i class="fas fa-tools text-3xl"></i>
+                <!-- Version Control & CI/CD -->
+                <div class="bg-white border border-gray-100 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="flex items-center mb-4">
+                        <div class="p-2 bg-blue-50 rounded-lg mr-3">
+                            <i class="fab fa-github text-gray-800 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800">Version Control & CI/CD</h3>
                     </div>
-                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Tools & Technologies</h3>
                     <ul class="space-y-3">
                         <li class="flex items-center">
-                            <i class="fab fa-docker text-blue-500 mr-2"></i>
-                            <span>Docker & Podman</span>
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span class="text-gray-700">Git & GitHub</span>
                         </li>
                         <li class="flex items-center">
-                            <i class="fas fa-cubes text-blue-500 mr-2"></i>
-                            <span>Kubernetes</span>
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span class="text-gray-700">GitHub Actions</span>
                         </li>
                         <li class="flex items-center">
-                            <i class="fab fa-github text-gray-800 mr-2"></i>
-                            <span>Git & GitHub</span>
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span class="text-gray-700">Jenkins</span>
                         </li>
                         <li class="flex items-center">
-                            <i class="fas fa-server text-blue-500 mr-2"></i>
-                            <span>Foreman</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-code-branch text-blue-500 mr-2"></i>
-                            <span>Saltstack</span>
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span class="text-gray-700">CI/CD Pipeline Design</span>
                         </li>
                     </ul>
                 </div>
                 
-                <!-- Soft Skills -->
-                <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
-                    <div class="text-blue-600 mb-4">
-                        <i class="fas fa-users text-3xl"></i>
+                <!-- Configuration Management -->
+                <div class="bg-white border border-gray-100 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="flex items-center mb-4">
+                        <div class="p-2 bg-blue-50 rounded-lg mr-3">
+                            <i class="fas fa-server text-blue-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800">Configuration Management</h3>
                     </div>
-                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Soft Skills</h3>
                     <ul class="space-y-3">
                         <li class="flex items-center">
-                            <i class="fas fa-comments text-blue-500 mr-2"></i>
-                            <span>Team Collaboration</span>
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span class="text-gray-700">Foreman</span>
                         </li>
                         <li class="flex items-center">
-                            <i class="fas fa-lightbulb text-blue-500 mr-2"></i>
-                            <span>Problem Solving</span>
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span class="text-gray-700">SaltStack</span>
                         </li>
                         <li class="flex items-center">
-                            <i class="fas fa-tasks text-blue-500 mr-2"></i>
-                            <span>Time Management</span>
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span class="text-gray-700">Ansible</span>
                         </li>
                         <li class="flex items-center">
-                            <i class="fas fa-comment-dots text-blue-500 mr-2"></i>
-                            <span>Effective Communication</span>
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span class="text-gray-700">Infrastructure as Code</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Scripting & Languages -->
+                <div class="bg-white border border-gray-100 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="flex items-center mb-4">
+                        <div class="p-2 bg-blue-50 rounded-lg mr-3">
+                            <i class="fas fa-code text-blue-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800">Scripting & Languages</h3>
+                    </div>
+                    <ul class="space-y-3">
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span class="text-gray-700">Bash/Shell Scripting</span>
                         </li>
                         <li class="flex items-center">
-                            <i class="fas fa-sync-alt text-blue-500 mr-2"></i>
-                            <span>Adaptability</span>
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span class="text-gray-700">Python</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span class="text-gray-700">YAML/JSON</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Monitoring & Logging -->
+                <div class="bg-white border border-gray-100 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="flex items-center mb-4">
+                        <div class="p-2 bg-blue-50 rounded-lg mr-3">
+                            <i class="fas fa-chart-line text-blue-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800">Monitoring & Logging</h3>
+                    </div>
+                    <ul class="space-y-3">
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span class="text-gray-700">Prometheus</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span class="text-gray-700">Grafana</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span class="text-gray-700">ELK Stack</span>
+                        </li>
+                
+                <!-- Cloud & Virtualization -->
+                <div class="bg-white border border-gray-100 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="flex items-center mb-4">
+                        <div class="p-2 bg-blue-50 rounded-lg mr-3">
+                            <i class="fas fa-cloud text-blue-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800">Cloud & Virtualization</h3>
+                    </div>
+                    <ul class="space-y-3">
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span class="text-gray-700">AWS</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span class="text-gray-700">Azure</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span class="text-gray-700">VMware</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span class="text-gray-700">Terraform</span>
                         </li>
                     </ul>
                 </div>
@@ -276,62 +350,39 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-20 px-4 bg-gray-50">
+    <section id="contact" class="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-50">
         <div class="max-w-6xl mx-auto">
-            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Get In Touch</h2>
+            <div class="text-center mb-16">
+                <span class="inline-block px-3 py-1 text-sm font-semibold text-blue-700 bg-blue-100 rounded-full mb-4">Get In Touch</span>
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Let's Work Together</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Have a project in mind or want to discuss potential opportunities? Feel free to reach out!</p>
+            </div>
             
-            <div class="bg-white rounded-lg shadow-md p-8 max-w-3xl mx-auto">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div>
-                        <h3 class="text-xl font-semibold text-gray-800 mb-4">Contact Information</h3>
-                        <ul class="space-y-4">
-                            <li class="flex items-start">
-                                <i class="fas fa-envelope text-blue-500 mt-1 mr-3"></i>
-                                <div>
-                                    <h4 class="font-medium text-gray-800">Email</h4>
-                                    <a href="mailto:rajput.pawan.personal@gmail.com" class="text-blue-600 hover:underline">
-                                        rajput.pawan.personal@gmail.com
-                                    </a>
-                                </div>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-phone-alt text-blue-500 mt-1 mr-3"></i>
-                                <div>
-                                    <h4 class="font-medium text-gray-800">Phone</h4>
-                                    <a href="tel:6392022174" class="text-blue-600 hover:underline">
-                                        +91 6392022174
-                                    </a>
-                                </div>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fab fa-linkedin text-blue-500 mt-1 mr-3"></i>
-                                <div>
-                                    <h4 class="font-medium text-gray-800">LinkedIn</h4>
-                                    <a href="https://www.linkedin.com/in/pawan-rajput-b3918a251/" target="_blank" class="text-blue-600 hover:underline">
-                                        linkedin.com/in/pawan-rajput-b3918a251
-                                    </a>
-                                </div>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fab fa-github text-blue-500 mt-1 mr-3"></i>
-                                <div>
-                                    <h4 class="font-medium text-gray-800">GitHub</h4>
-                                    <a href="https://github.com/RajputPawan" target="_blank" class="text-blue-600 hover:underline">
-                                        github.com/RajputPawan
-                                    </a>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                    
-                    <div>
-                        <h3 class="text-xl font-semibold text-gray-800 mb-4">Send Me a Message</h3>
-                        <form class="space-y-4">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                <!-- Contact Form -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">Send Me a Message</h3>
+                    <form id="contactForm" class="space-y-5">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
                             <div>
-                                <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
-                                <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                <label for="name" class="block text-sm font-medium text-gray-700 mb-1.5">Your Name <span class="text-red-500">*</span></label>
+                                <div class="relative">
+                                    <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                        <i class="fas fa-user text-gray-400"></i>
+                                    </div>
+                                    <input type="text" id="name" name="name" required 
+                                           class="block w-full pl-10 pr-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                                </div>
                             </div>
                             <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700 mb-1.5">Email Address <span class="text-red-500">*</span></label>
+                                <div class="relative">
+                                    <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                        <i class="fas fa-envelope text-gray-400"></i>
+                                    </div>
+                                    <input type="email" id="email" name="email" required 
+                                           class="block w-full pl-10 pr-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                                </div>
                                 <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
                                 <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
                             </div>

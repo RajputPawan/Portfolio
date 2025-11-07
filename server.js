@@ -1,4 +1,10 @@
-require('dotenv').config();
+// Load environment variables if .env file exists
+try {
+  require('dotenv').config();
+} catch (e) {
+  // dotenv is optional, continue without it
+}
+
 const express = require('express');
 const exphbs = require('express-handlebars');
 const path = require('path');
@@ -86,6 +92,14 @@ app.listen(PORT, () => {
   console.log('Available routes:');
   console.log(`- http://localhost:${PORT}/`);
   console.log(`- http://localhost:${PORT}/about`);
+}).on('error', (err) => {
+  if (err.code === 'EADDRINUSE') {
+    console.error(`\n❌ Error: Port ${PORT} is already in use!`);
+    console.error(`   Try using a different port: PORT=3001 node server.js\n`);
+  } else {
+    console.error('\n❌ Server error:', err.message);
+  }
+  process.exit(1);
 });
 
 module.exports = app;
